@@ -1,0 +1,66 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+
+{% block title %}
+Quiz 
+{% endblock%} 
+
+
+{% block content%}
+
+<div class="quiz_main_div">
+  <div class="start_btn">
+    <button>Quizni boshlash</button>
+  </div>
+
+  <div class="info_box">
+    <div class="info_title">
+      <span>Test topshirish qoidalari</span>
+    </div>
+    <div class="info_list">
+      <div class="info">1. Tez yechishga xarakat qiling</div>
+      <div class="info">2. 50% dan yuqori topganlar imtixondan o'tishadi.</div>
+      <label class="form-label mt-3" for="form_name">Ism:</label>
+      <input id="form_name" class="form-control mb-3" type="text" placeholder="Ismingizni kiriting" required name="name">
+    </div>
+    <div class="buttons">
+      <button class="restart d-none">Testni boshlash</button>
+    </div>
+  </div>
+
+  <div class="quiz_box">
+    <header>
+      <div class="title">NamSoft Test to'plami</div>
+      <div class="timer">
+        <div class="time_text">Vaqt</div>
+        <div class="time_sec">00</div>
+      </div>
+    </header>
+    <section>
+      <div class="quiz_text">
+        <span>Xatolik yuz berdi</span>
+      </div>
+      <div class="option_list"></div>
+    </section>
+    <footer>
+      <div class="total_quiz"></div>
+      <button class="next_btn">Keyingi savol</button>
+    </footer>
+  </div>
+
+  <div class="result_box">
+    <div class="icon">
+      <i class="fa-solid fa-crown"></i>
+    </div>
+    <div class="complate_text">Siz testni tugatdingiz!</div>
+    <div class="score_text text-center">Test javoblari kunning oxirida elon qilamiz!</div>
+    <div class="buttons">
+      <button class="quit"><a href="{% url 'home' %}">Yakunlash</a></button>
+    </div>
+  </div>
+</div>
+
+{% endblock %} 
+
+
